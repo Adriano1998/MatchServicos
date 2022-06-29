@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_background"
+    tools:context=".TelaCadastroServico">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imgbtnVoltarTelaCadServico"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+
+    <TextView
+        android:id="@+id/txtCadServicoTelaCadServico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="Cadastro de Serviço"
+        >
+
+    </TextView>
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:layout_marginStart="50dp"
+                android:textColor="@color/black"
+                android:layout_width="300dp"
+                android:textStyle="bold"
+                android:text="Escolha uma categoria"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+        android:id="@+id/cdvwTelaCadServico"
+        android:layout_width="300dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCadServicoTelaCadServico">
+
+
+
+
+        <Spinner
+            android:id="@+id/spnCategoriaTelaCadServico"
+            android:layout_width="300dp"
+            android:popupBackground="@color/login_background"
+            android:layout_height="wrap_content"
+            android:popupElevation="@dimen/cardview_default_radius"
+            android:popupTheme="@color/login_background"
+            android:layout_marginEnd="60dp"
+            android:background="@color/login_background"
+            android:backgroundTintMode="src_over"
+
+           ></Spinner>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtinpDescricaoTelaCadServico"
+        android:layout_width="300dp"
+        android:maxLength="200"
+        android:padding="10dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/login_background"
+        android:background="@color/black"
+        android:hint="Descrição"
+        android:textColorHint="@color/login_background"
+
+        android:layout_marginEnd="44dp">
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:id="@+id/txtinpRuaTelaCadServico"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:maxLength="50"
+                android:layout_marginStart="50dp"
+                android:layout_width="300dp"
+                android:layout_marginEnd="60dp"
+                android:background="@color/black"
+                android:hint="Rua"
+                android:textColor="@color/login_background"
+                android:textColorHint="@color/login_background"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:id="@+id/txtinpNumeroTelaCadServico"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="300dp"
+                android:maxLength="8"
+                android:layout_marginEnd="60dp"
+                android:background="@color/black"
+                android:hint="Número"
+                android:inputType="number"
+                android:textColor="@color/login_background"
+                android:textColorHint="@color/login_background"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:id="@+id/txtinpBairroTelaCadServico"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="300dp"
+                android:maxLength="25"
+                android:layout_marginEnd="60dp"
+                android:background="@color/black"
+                android:hint="Bairro"
+                android:textColor="@color/login_background"
+                android:textColorHint="@color/login_background"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:id="@+id/txtinpCidadeTelaCadServico"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="300dp"
+                android:layout_marginEnd="60dp"
+                android:maxLength="20"
+                android:background="@color/black"
+                android:hint="Cidade"
+                android:textColor="@color/login_background"
+                android:textColorHint="@color/login_background"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:id="@+id/txtinpEstadoTelaCadServico"
+                android:layout_height="50dp"
+                android:maxLength="25"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="300dp"
+                android:layout_marginEnd="60dp"
+                android:background="@color/black"
+                android:hint="Estado"
+                android:textColor="@color/login_background"
+                android:textColorHint="@color/login_background"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:id="@+id/txtinpPaisTelaCadServico"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="50dp"
+                android:maxLength="25"
+                android:layout_width="300dp"
+                android:layout_marginEnd="60dp"
+                android:background="@color/black"
+                android:hint="País"
+                android:textColor="@color/login_background"
+                android:textColorHint="@color/login_background"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <Button
+                android:id="@+id/btnCadastrarTelaCadServico"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/login_background"
+                android:text="Cadastrar"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

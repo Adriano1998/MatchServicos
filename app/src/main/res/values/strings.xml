@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MatchServiços</string>
+    <string name="selected_item">Escolha uma Categoria:</string>
+
+    <string-array name="Categorias">
+        <item>Administrativo</item>
+        <item>Construção Civil</item>
+        <item>Evento</item>
+        <item>Limpeza</item>
+        <item>Manutenção</item>
+    </string-array>
+</resources>

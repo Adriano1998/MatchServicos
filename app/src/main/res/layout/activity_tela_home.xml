@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_background"
+    tools:context=".TelaHome">
+
+
+    <ImageView
+        android:id="@+id/imgMatchServicos"
+        android:layout_width="268dp"
+        android:layout_height="162dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032"
+        app:srcCompat="@drawable/captura_de_tela_2022_06_11_151831__1_" />
+
+
+    <TextView
+        android:id="@+id/txtconsumidor"
+        android:layout_width="244dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="84dp"
+        android:text="Bem vindo!"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMatchServicos">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTelaHome"
+        android:layout_width="287dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/black"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtconsumidor">
+
+        <ImageButton
+            android:id="@+id/imgbtnEditTelaHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/ic_baseline_edit_24"
+            ></ImageButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/login_background"
+            android:text="Nome"
+            android:textColor="@color/login_background"
+            tools:text="Nome"></TextView>
+
+
+        <TextView
+            android:id="@+id/tilNomeTelaHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/login_background"
+            android:textColor="@color/login_background"
+            tools:text="assaas">
+
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/login_background"
+            android:text="Email"
+            android:textStyle="bold"
+            android:textColor="@color/login_background"
+            tools:text="Email"></TextView>
+
+        <TextView
+            android:id="@+id/tilEmailTelaHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/login_background"
+            android:textColor="@color/login_background"
+            tools:text="assaas">
+
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="120dp"
+            android:backgroundTint="@color/login_background"
+            android:text="Telefone"
+            android:textStyle="bold"
+            android:textColor="@color/login_background"
+            tools:text="Telefone"></TextView>
+
+        <TextView
+            android:id="@+id/tilTelefoneTelaHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="120dp"
+            android:backgroundTint="@color/login_background"
+            android:textColor="@color/login_background"
+            tools:text="assaas">
+
+
+        </TextView>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtBuscaServicoTelaHome"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickBuscarServico"
+        android:text="Buscar Serviço"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardTelaHome">
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtCadastrarServicoTelaHome"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="Cadastrar Serviço"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBuscaServicoTelaHome">
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtMeusServicosTelaHome"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickBuscarMeusServicos"
+        android:text="Meus Serviços"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCadastrarServicoTelaHome">
+
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:layout_width="380dp"
+        android:layout_height="280dp">
+
+        <TextView
+            android:id="@+id/txtCategoriaItemServico"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            tools:text="Funilaria"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/login_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtDescricaoItemServico"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/login_background"
+            tools:text="Descricao :"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtPrestadorItemServico"
+            tools:text="Prestador de Serviço:"
+            android:textColor="@color/login_background"
+            android:layout_marginTop="105dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txtTelefoneItemServico"
+            tools:text="Telefone"
+            android:textColor="@color/login_background"
+            android:layout_marginTop="105dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="220dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txtRuaItemServico"
+            tools:text="Rua"
+            android:paddingLeft="10dp"
+            android:textColor="@color/login_background"
+            android:layout_marginTop="140dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txtNumeroItemServico"
+            tools:text="Numero"
+            android:textColor="@color/login_background"
+            android:layout_marginTop="140dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="220dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txtBairroItemServico"
+            tools:text="Bairro"
+            android:paddingLeft="10dp"
+            android:textColor="@color/login_background"
+            android:layout_marginTop="175dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txtCidadeItemServico"
+            tools:text="Cidade"
+            android:textColor="@color/login_background"
+            android:layout_marginTop="220dp"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+
+        <TextView
+            android:id="@+id/txtEstadoItemServico"
+            tools:text="Estado"
+            android:textColor="@color/login_background"
+            android:layout_marginTop="175dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="220dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txtPaisItemServico"
+            tools:text="Pais"
+            android:textColor="@color/login_background"
+            android:layout_marginTop="220dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="220dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

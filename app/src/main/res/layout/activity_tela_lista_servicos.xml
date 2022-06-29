@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/login_background"
+    android:orientation="vertical"
+    tools:context=".TelaListaServicos">
+
+    <ImageButton
+        android:id="@+id/imgbtnVoltarTelaListaServicos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        ></ImageButton>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="347dp"
+        android:layout_height="232dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        app:srcCompat="@drawable/captura_de_tela_2022_06_11_151831__1_" />
+
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="50dp">
+
+        <Spinner
+            android:id="@+id/spnCategoriaTelaListaServicos"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@color/login_background"
+            android:backgroundTintMode="src_over"
+            android:popupBackground="@color/login_background"
+            android:popupElevation="@dimen/cardview_default_radius"
+            android:popupTheme="@color/login_background"
+            ></Spinner>
+
+        <ImageButton
+            android:id="@+id/imgbtnPesquisaTelaListaServicos"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_search_24" />
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListaServicos"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/txtvwSemServicoTelaListaServicos"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Sem Serviços Cadastrados"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        ></TextView>
+
+
+
+</LinearLayout>
