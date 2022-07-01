@@ -10,7 +10,7 @@ interface UsuarioDAO {
     fun inserir(usuarioEntidade: UsuarioEntidade)
 
     @Query("Select * from usuario_table where usuario_email =  :email and usuario_senha  = :senha")
-    fun buscarLogineSenha(email : String, senha: String) : UsuarioEntidade
+    fun buscarLogineSenha(email: String, senha: String): UsuarioEntidade
 
     @Query("select * from usuario_table where usuario_id = :id")
     fun buscarPorId(id: Int): UsuarioEntidade

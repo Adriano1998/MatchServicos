@@ -12,9 +12,9 @@ data class ServicoEntidade(
     @ColumnInfo(name = "servico_id")
     val id: Int = 0,
     @ColumnInfo(name = "servico_categoria")
-    val categoria : String,
+    val categoria: String,
     @ColumnInfo(name = "servico_descricao")
-    val descricao : String,
+    val descricao: String,
     @Embedded
     val usuario: UsuarioEntidade,
     @Embedded

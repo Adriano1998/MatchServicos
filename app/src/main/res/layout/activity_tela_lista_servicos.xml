@@ -16,25 +16,23 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#00FFFFFF"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        ></ImageButton>
+        android:src="@drawable/ic_baseline_arrow_back_24"></ImageButton>
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="347dp"
         android:layout_height="232dp"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         app:srcCompat="@drawable/captura_de_tela_2022_06_11_151831__1_" />
-
 
 
     <androidx.cardview.widget.CardView
 
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
         android:layout_width="350dp"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
 
         <Spinner
             android:id="@+id/spnCategoriaTelaListaServicos"
@@ -44,8 +42,7 @@
             android:backgroundTintMode="src_over"
             android:popupBackground="@color/login_background"
             android:popupElevation="@dimen/cardview_default_radius"
-            android:popupTheme="@color/login_background"
-            ></Spinner>
+            android:popupTheme="@color/login_background"></Spinner>
 
         <ImageButton
             android:id="@+id/imgbtnPesquisaTelaListaServicos"
@@ -59,34 +56,29 @@
             app:srcCompat="@drawable/ic_baseline_search_24" />
 
 
-
-
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvListaServicos"
-        android:layout_marginTop="30dp"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:layout_marginTop="30dp"
+        android:visibility="gone">
 
     </androidx.recyclerview.widget.RecyclerView>
 
     <TextView
         android:id="@+id/txtvwSemServicoTelaListaServicos"
         android:layout_width="wrap_content"
-        android:visibility="gone"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="200dp"
         android:gravity="center"
-        android:layout_gravity="center"
         android:text="Sem Serviços Cadastrados"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        ></TextView>
-
+        android:visibility="gone"></TextView>
 
 
 </LinearLayout>

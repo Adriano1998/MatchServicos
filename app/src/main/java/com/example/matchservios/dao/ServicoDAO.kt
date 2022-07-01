@@ -20,7 +20,7 @@ interface ServicoDAO {
     fun buscarPorCategoria(categoria: String): List<ServicoEntidade>
 
     @Query("SELECT * FROM SERVICO_TABLE WHERE usuario_id = :id")
-    fun buscarPorUsuario(id: Int) : List<ServicoEntidade>
+    fun buscarPorUsuario(id: Int): List<ServicoEntidade>
 
     @Delete
     fun delete(servicoEntidade: ServicoEntidade)

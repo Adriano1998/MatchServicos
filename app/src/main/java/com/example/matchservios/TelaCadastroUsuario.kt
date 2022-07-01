@@ -11,13 +11,13 @@ import com.google.android.material.textfield.TextInputEditText
 
 class TelaCadastroUsuario : AppCompatActivity() {
 
-    private lateinit var btnCadastrar : Button
-    private lateinit var tinptxtNomeCadUsuario : TextInputEditText
+    private lateinit var btnCadastrar: Button
+    private lateinit var tinptxtNomeCadUsuario: TextInputEditText
     private lateinit var tinptxtEmailCadUsuario: TextInputEditText
-    private lateinit var tinptxtTelCadUsuario : TextInputEditText
-    private lateinit var tinptxtSenhaCadUsuario : TextInputEditText
-    private lateinit var tinptxtConfirmarSenhaCadUsuario : TextInputEditText
-    private lateinit var imgbtnVoltar : ImageButton
+    private lateinit var tinptxtTelCadUsuario: TextInputEditText
+    private lateinit var tinptxtSenhaCadUsuario: TextInputEditText
+    private lateinit var tinptxtConfirmarSenhaCadUsuario: TextInputEditText
+    private lateinit var imgbtnVoltar: ImageButton
     private val usuarioRepository = UsuarioRepository(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,28 +28,26 @@ class TelaCadastroUsuario : AppCompatActivity() {
         iniciarComponentes()
 
 
-        btnCadastrar.setOnClickListener{
+        btnCadastrar.setOnClickListener {
             saveToLocalDb()
         }
 
 
-        imgbtnVoltar.setOnClickListener{
+        imgbtnVoltar.setOnClickListener {
             val intentvoltar = Intent(this, TelaLogin::class.java)
             startActivity(intentvoltar)
         }
     }
 
 
-
-
-    private fun iniciarComponentes(){
+    private fun iniciarComponentes() {
         btnCadastrar = findViewById(R.id.btnCadastrarTelacadusuario)
         tinptxtNomeCadUsuario = findViewById(R.id.txtinpNomeCadUsuario)
         tinptxtEmailCadUsuario = findViewById(R.id.txtinpEmailTelaCadUsuario)
         tinptxtTelCadUsuario = findViewById(R.id.txtinpTelTelaCadUsuario)
         tinptxtSenhaCadUsuario = findViewById(R.id.txtinpSenhaTelaCadUsuario)
         tinptxtConfirmarSenhaCadUsuario = findViewById(R.id.txtinpConfirmarSenhaTelaCadUsuario)
-        imgbtnVoltar =  findViewById(R.id.imgbtnVoltarTelacadusuario)
+        imgbtnVoltar = findViewById(R.id.imgbtnVoltarTelacadusuario)
 
     }
 
@@ -61,17 +59,18 @@ class TelaCadastroUsuario : AppCompatActivity() {
         val campoSenha = tinptxtSenhaCadUsuario.text.toString()
         val campoConfirmarSenha = tinptxtConfirmarSenhaCadUsuario.text.toString()
         if (campoNome.isNotEmpty() && campoEmail.isNotEmpty() && campoTelefone.isNotEmpty()
-            && campoSenha.isNotEmpty() && campoConfirmarSenha.isNotEmpty()) {
+            && campoSenha.isNotEmpty() && campoConfirmarSenha.isNotEmpty()
+        ) {
             tinptxtNomeCadUsuario.error = null
             tinptxtEmailCadUsuario.error = null
             tinptxtTelCadUsuario.error = null
             tinptxtSenhaCadUsuario.error = null
             tinptxtConfirmarSenhaCadUsuario.error = null
 
-            if(campoConfirmarSenha.equals(campoSenha)){
+            if (campoConfirmarSenha.equals(campoSenha)) {
                 val usuarioEntidade =
                     UsuarioEntidade(
-                       nome = campoNome,
+                        nome = campoNome,
                         email = campoEmail,
                         telefone = campoTelefone,
                         senha = campoSenha
@@ -81,11 +80,9 @@ class TelaCadastroUsuario : AppCompatActivity() {
                 val intent = Intent(this, TelaLogin::class.java)
                 startActivity(intent)
 
-            }
-            else {
+            } else {
                 tinptxtConfirmarSenhaCadUsuario.error = "Senha diferente informada"
             }
-
 
 
         } else {
@@ -96,11 +93,6 @@ class TelaCadastroUsuario : AppCompatActivity() {
             tinptxtConfirmarSenhaCadUsuario.error = "Campo não pode estar em branco"
         }
     }
-
-
-
-
-
 
 
 }

@@ -64,7 +64,7 @@ class TelaCadastroServico : AppCompatActivity() {
 
         }
 
-        imgbtnVoltar.setOnClickListener{
+        imgbtnVoltar.setOnClickListener {
             finish()
         }
 

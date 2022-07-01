@@ -26,8 +26,8 @@
         android:layout_height="58dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="84dp"
-        android:text="Bem vindo!"
         android:gravity="center"
+        android:text="Bem vindo!"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -54,19 +54,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="250dp"
             android:backgroundTint="#00FFFFFF"
-            android:src="@drawable/ic_baseline_edit_24"
-            ></ImageButton>
+            android:src="@drawable/ic_baseline_edit_24"></ImageButton>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:layout_marginTop="40dp"
-            android:paddingLeft="10dp"
-            android:textStyle="bold"
             android:backgroundTint="@color/login_background"
+            android:paddingLeft="10dp"
             android:text="Nome"
             android:textColor="@color/login_background"
+            android:textStyle="bold"
             tools:text="Nome"></TextView>
 
 
@@ -86,13 +85,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="80dp"
             android:backgroundTint="@color/login_background"
+            android:paddingLeft="10dp"
             android:text="Email"
-            android:textStyle="bold"
             android:textColor="@color/login_background"
+            android:textStyle="bold"
             tools:text="Email"></TextView>
 
         <TextView
@@ -111,13 +110,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="120dp"
             android:backgroundTint="@color/login_background"
+            android:paddingLeft="10dp"
             android:text="Telefone"
-            android:textStyle="bold"
             android:textColor="@color/login_background"
+            android:textStyle="bold"
             tools:text="Telefone"></TextView>
 
         <TextView
@@ -132,8 +131,6 @@
 
 
         </TextView>
-
-
 
 
     </androidx.cardview.widget.CardView>

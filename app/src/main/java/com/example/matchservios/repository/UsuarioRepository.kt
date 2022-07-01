@@ -10,11 +10,11 @@ class UsuarioRepository(private val context: Context) {
         AppDatabase.getInstance(context)?.getUsuarioDAO()?.inserir(usuarioEntidade)
     }
 
-    fun buscarPorEmaileSenha(email: String, senha: String) : UsuarioEntidade?{
-    return AppDatabase.getInstance(context)?.getUsuarioDAO()?.buscarLogineSenha(email, senha)
+    fun buscarPorEmaileSenha(email: String, senha: String): UsuarioEntidade? {
+        return AppDatabase.getInstance(context)?.getUsuarioDAO()?.buscarLogineSenha(email, senha)
     }
 
-    fun buscarPorId(id: Int) : UsuarioEntidade?{
+    fun buscarPorId(id: Int): UsuarioEntidade? {
         return AppDatabase.getInstance(context)?.getUsuarioDAO()?.buscarPorId(id)
     }
 

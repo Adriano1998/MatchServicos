@@ -11,7 +11,7 @@ data class UsuarioEntidade(
     @ColumnInfo(name = "usuario_id")
     val id: Int = 0,
     @ColumnInfo(name = "usuario_nome")
-    var nome : String,
+    var nome: String,
     @ColumnInfo(name = "usuario_email")
     var email : String,
     @ColumnInfo(name = "usuario_tel")

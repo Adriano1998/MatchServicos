@@ -19,7 +19,7 @@ class TelaListaServicos : AppCompatActivity() {
     private lateinit var rvListaServicos: RecyclerView
     private lateinit var spinnerCategorias: Spinner
     private val servicoRepository = ServicoRepository(this)
-    private lateinit var txtsemservicos : TextView
+    private lateinit var txtsemservicos: TextView
     private var isBooleanMode = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,14 +85,13 @@ class TelaListaServicos : AppCompatActivity() {
     private fun atualizarServicoPorCategoria() {
         val listaDeServicos =
             servicoRepository.buscarPorCategoria(categoria = spinnerCategorias.selectedItem.toString())
-       if(listaDeServicos.isNullOrEmpty()){
-        isBooleanMode = true
-       }
-        if(isBooleanMode){
+        if (listaDeServicos.isNullOrEmpty()) {
+            isBooleanMode = true
+        }
+        if (isBooleanMode) {
             txtsemservicos.visibility = View.VISIBLE
             rvListaServicos.visibility = View.GONE
-        }
-        else {
+        } else {
             rvListaServicos.visibility = View.VISIBLE
         }
         listaDeServicos?.let {

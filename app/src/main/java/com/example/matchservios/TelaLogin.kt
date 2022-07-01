@@ -11,10 +11,10 @@ import com.google.android.material.textfield.TextInputEditText
 
 class TelaLogin : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var txtinputlogin : TextInputEditText
-    private lateinit var txtinputsenha : TextInputEditText
-    private lateinit var btnentrar : Button
-    lateinit var txtCadastro : TextView
+    private lateinit var txtinputlogin: TextInputEditText
+    private lateinit var txtinputsenha: TextInputEditText
+    private lateinit var btnentrar: Button
+    lateinit var txtCadastro: TextView
     private val usuarioRepository = UsuarioRepository(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,14 +26,14 @@ class TelaLogin : AppCompatActivity(), View.OnClickListener {
         iniciarComponentes()
 
 
-        btnentrar.setOnClickListener{
+        btnentrar.setOnClickListener {
             buscarLogineSenhaBanco()
         }
 
     }
 
 
-   private fun iniciarComponentes(){
+    private fun iniciarComponentes() {
         txtinputlogin = findViewById(R.id.txtinploginTelaLogin)
         txtinputsenha = findViewById(R.id.txtinpsenhaTelaLogin)
         btnentrar = findViewById(R.id.btnEntrarTelaLogin)
@@ -46,27 +46,26 @@ class TelaLogin : AppCompatActivity(), View.OnClickListener {
         startActivity(intentdetalhes)
     }
 
-     fun onClickBuscarServico(v: View?) {
+    fun onClickBuscarServico(v: View?) {
         val intentdetalhes = Intent(this, TelaListaServicos::class.java)
         startActivity(intentdetalhes)
     }
 
-    private fun buscarLogineSenhaBanco(){
+    private fun buscarLogineSenhaBanco() {
         val textlogin = txtinputlogin.text.toString()
         val textSenha = txtinputsenha.text.toString()
-        if(textlogin.isNotEmpty() && textSenha.isNotEmpty()){
+        if (textlogin.isNotEmpty() && textSenha.isNotEmpty()) {
             txtinputlogin.error = null
             txtinputsenha.error = null
-        val usuario = usuarioRepository.buscarPorEmaileSenha(textlogin, textSenha)
-        val usuarioparaid = usuario?.id
-        usuario?.let {
-           val intentUsuario = Intent(this, TelaHome::class.java)
-            intentUsuario.putExtra("usuario_id", usuarioparaid)
-            startActivity(intentUsuario)
+            val usuario = usuarioRepository.buscarPorEmaileSenha(textlogin, textSenha)
+            val usuarioparaid = usuario?.id
+            usuario?.let {
+                val intentUsuario = Intent(this, TelaHome::class.java)
+                intentUsuario.putExtra("usuario_id", usuarioparaid)
+                startActivity(intentUsuario)
 
-        }
-    }
-        else {
+            }
+        } else {
             txtinputlogin.error = "Digite o campo em branco"
             txtinputsenha.error = "Digite o campo em branco"
         }

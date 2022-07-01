@@ -11,11 +11,11 @@ import com.google.android.material.textfield.TextInputEditText
 
 class TelaEdicao : AppCompatActivity() {
 
-    private lateinit var txtinpedttxtNome : TextInputEditText
-    private lateinit var txtinpedttxtEmail : TextInputEditText
-    private lateinit var txtinpedtxtTelefone : TextInputEditText
-    private lateinit var btnAlterar : Button
-    private lateinit var imgbtnVoltar : AppCompatImageButton
+    private lateinit var txtinpedttxtNome: TextInputEditText
+    private lateinit var txtinpedttxtEmail: TextInputEditText
+    private lateinit var txtinpedtxtTelefone: TextInputEditText
+    private lateinit var btnAlterar: Button
+    private lateinit var imgbtnVoltar: AppCompatImageButton
     private var usuarioId: Int? = null
     private val usuarioRepository = UsuarioRepository(this)
 
@@ -30,22 +30,22 @@ class TelaEdicao : AppCompatActivity() {
 
         val usuarioSelecionado = usuarioRepository.buscarPorId(usuarioId!!)
         usuarioSelecionado?.let { usu ->
-        txtinpedttxtNome.setText(usu.nome)
+            txtinpedttxtNome.setText(usu.nome)
             txtinpedttxtEmail.setText(usu.email)
             txtinpedtxtTelefone.setText(usu.telefone)
         }
 
-        imgbtnVoltar.setOnClickListener{
+        imgbtnVoltar.setOnClickListener {
             finish()
         }
 
-        btnAlterar.setOnClickListener{
+        btnAlterar.setOnClickListener {
             atualizaDB()
         }
     }
 
 
-    private fun iniciarComponentes(){
+    private fun iniciarComponentes() {
         imgbtnVoltar = findViewById(R.id.imgbtnVoltarTelaEdicao)
         txtinpedttxtNome = findViewById(R.id.txtinpNomeEdtxtTelaEdicao)
         txtinpedttxtEmail = findViewById(R.id.txtinpEmailEdtxtTelaEdicao)
@@ -53,15 +53,15 @@ class TelaEdicao : AppCompatActivity() {
         btnAlterar = findViewById(R.id.btnEditarTelaEdicao)
     }
 
-    private fun atualizaDB(){
+    private fun atualizaDB() {
         val campoNome = txtinpedttxtNome.text.toString()
         val campoEmail = txtinpedttxtEmail.text.toString()
         val campoTelefone = txtinpedtxtTelefone.text.toString()
 
         if (campoNome.isNotEmpty() && campoEmail.isNotEmpty() && campoTelefone.isNotEmpty()) {
-                txtinpedttxtNome.error = null
-                txtinpedttxtEmail.error = null
-                txtinpedtxtTelefone.error = null
+            txtinpedttxtNome.error = null
+            txtinpedttxtEmail.error = null
+            txtinpedtxtTelefone.error = null
 
             val usuario = usuarioRepository.buscarPorId(usuarioId!!)
 
@@ -79,8 +79,6 @@ class TelaEdicao : AppCompatActivity() {
         }
 
     }
-
-
 
 
 }

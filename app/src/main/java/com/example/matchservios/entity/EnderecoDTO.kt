@@ -8,5 +8,5 @@ data class EnderecoDTO(
     val estado: String,
     val pais: String,
 
-) {
+    ) {
 }

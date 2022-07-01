@@ -13,15 +13,15 @@ import com.example.matchservios.repository.UsuarioRepository
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
-class TelaHome : AppCompatActivity(), View.OnClickListener  {
+class TelaHome : AppCompatActivity(), View.OnClickListener {
 
     var usuarioId = 0
-    private lateinit var txtNome : TextView
-    private lateinit var txtEmail : TextView
-    private lateinit var txtTelefone : TextView
-    private lateinit var txtCadastroServico : TextView
-    private lateinit var txtBuscaServico : TextView
-    private lateinit var imgBtnEditarDados : AppCompatImageButton
+    private lateinit var txtNome: TextView
+    private lateinit var txtEmail: TextView
+    private lateinit var txtTelefone: TextView
+    private lateinit var txtCadastroServico: TextView
+    private lateinit var txtBuscaServico: TextView
+    private lateinit var imgBtnEditarDados: AppCompatImageButton
 
 
     private val usuarioRepository = UsuarioRepository(this)
@@ -36,7 +36,7 @@ class TelaHome : AppCompatActivity(), View.OnClickListener  {
         usuarioId = intent.getIntExtra("usuario_id", 1)
         buscarDadosUsuario()
 
-        imgBtnEditarDados.setOnClickListener{
+        imgBtnEditarDados.setOnClickListener {
             val intentUsuario = Intent(this, TelaEdicao::class.java)
             intentUsuario.putExtra("usuario_id", usuarioId)
             startActivity(intentUsuario)
@@ -45,12 +45,11 @@ class TelaHome : AppCompatActivity(), View.OnClickListener  {
     }
 
 
-
-    private fun buscarDadosUsuario(){
+    private fun buscarDadosUsuario() {
 
         val usuarioSelecionado = usuarioRepository.buscarPorId(usuarioId!!)
 
-        usuarioSelecionado?.let { usu->
+        usuarioSelecionado?.let { usu ->
             txtNome.setText(usu.nome)
             txtEmail.setText(usu.email)
             txtTelefone.setText(usu.telefone)
@@ -62,7 +61,7 @@ class TelaHome : AppCompatActivity(), View.OnClickListener  {
         buscarDadosUsuario()
     }
 
-    private fun iniciarComponentes(){
+    private fun iniciarComponentes() {
         txtNome = findViewById(R.id.tilNomeTelaHome)
         txtBuscaServico = findViewById(R.id.txtBuscaServicoTelaHome)
         txtEmail = findViewById(R.id.tilEmailTelaHome)
